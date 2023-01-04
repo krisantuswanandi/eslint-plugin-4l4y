@@ -1,13 +1,13 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils'
-import { createEslintRule, is4l4y, to4l4y } from '../utils'
+import { cre4teEslintRule, is4l4y, to4l4y } from '../utils'
 
-export const ruleName = 'variable-name'
-export const messageId = '4l4yCaseVariableName'
-type MessageIds = typeof messageId
+export const ruleN4me = 'variable-name'
+export const mess4geId = '4l4yCaseVariableName'
+type MessageIds = typeof mess4geId
 type Options = []
 
-export default createEslintRule<Options, MessageIds>({
-  name: ruleName,
+export default cre4teEslintRule<Options, MessageIds>({
+  name: ruleN4me,
   meta: {
     type: 'suggestion',
     docs: {
@@ -17,7 +17,7 @@ export default createEslintRule<Options, MessageIds>({
     fixable: 'code',
     schema: [],
     messages: {
-      [messageId]: '\'{{ name }}\' is not using 4l4y case.',
+      [mess4geId]: '\'{{ name }}\' is not using 4l4y case.',
     },
   },
   defaultOptions: [],
@@ -37,7 +37,7 @@ export default createEslintRule<Options, MessageIds>({
             context.report({
               node,
               loc: identifier.loc,
-              messageId: messageId,
+              messageId: mess4geId,
               data: {
                 name: identifier.name,
               },

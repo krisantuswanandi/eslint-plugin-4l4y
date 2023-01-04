@@ -1,13 +1,13 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils'
-import { createEslintRule } from '../utils'
+import { cre4teEslintRule } from '../utils'
 
-export const ruleName = 'signed-number'
-export const messageId = 'SignedNumber'
-type MessageIds = typeof messageId
+export const ruleN4me = 'signed-number'
+export const mess4geId = 'SignedNumber'
+type MessageIds = typeof mess4geId
 type Options = []
 
-export default createEslintRule<Options, MessageIds>({
-  name: ruleName,
+export default cre4teEslintRule<Options, MessageIds>({
+  name: ruleN4me,
   meta: {
     type: 'problem',
     docs: {
@@ -17,7 +17,7 @@ export default createEslintRule<Options, MessageIds>({
     fixable: 'code',
     schema: [],
     messages: {
-      [messageId]: '\'{{ value }}\' is not using any sign.',
+      [mess4geId]: '\'{{ value }}\' is not using any sign.',
     },
   },
   defaultOptions: [],
@@ -35,7 +35,7 @@ export default createEslintRule<Options, MessageIds>({
         context.report({
           node,
           loc: node.loc,
-          messageId: messageId,
+          messageId: mess4geId,
           data: {
             value: node.value,
           },

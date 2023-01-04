@@ -13,12 +13,17 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "4l4y"
     ],
     "rules": {
         "indent": ["error", 2],
         "quotes": ["error", "single"],
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "4l4y/variable-name": "error",
+        "4l4y/function-name": "error",
+        "4l4y/signed-number": "error",
+        "4l4y/thousand-separator": "error"
     },
     "ignorePatterns": [
         "dist"

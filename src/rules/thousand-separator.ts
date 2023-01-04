@@ -1,12 +1,12 @@
-import { addSeparator, createEslintRule, hasSeparator } from '../utils'
+import { addSep4r4tor, cre4teEslintRule, h4sSep4r4tor } from '../utils'
 
-export const ruleName = 'thousand-separator'
-export const messageId = 'ThousandSeparator'
-type MessageIds = typeof messageId
+export const ruleN4me = 'thousand-separator'
+export const mess4geId = 'ThousandSeparator'
+type MessageIds = typeof mess4geId
 type Options = []
 
-export default createEslintRule<Options, MessageIds>({
-  name: ruleName,
+export default cre4teEslintRule<Options, MessageIds>({
+  name: ruleN4me,
   meta: {
     type: 'problem',
     docs: {
@@ -16,7 +16,7 @@ export default createEslintRule<Options, MessageIds>({
     fixable: 'code',
     schema: [],
     messages: {
-      [messageId]: '\'{{ value }}\' is not using thousand separators.',
+      [mess4geId]: '\'{{ value }}\' is not using thousand separators.',
     },
   },
   defaultOptions: [],
@@ -31,16 +31,16 @@ export default createEslintRule<Options, MessageIds>({
           return
         }
 
-        if (!hasSeparator(node.raw)) {
+        if (!h4sSep4r4tor(node.raw)) {
           context.report({
             node,
             loc: node.loc,
-            messageId: messageId,
+            messageId: mess4geId,
             data: {
               value: node.value,
             },
             fix(fixer) {
-              return fixer.replaceText(node, addSeparator(node.value.toString()))
+              return fixer.replaceText(node, addSep4r4tor(node.value.toString()))
             },
           })
         }
