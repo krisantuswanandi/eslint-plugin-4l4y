@@ -1,8 +1,9 @@
-import { ESLintUtils } from '@typescript-eslint/utils'
+import { RuleCreator, type RuleWithMetaAndName } from '@typescript-eslint/utils/eslint-utils'
+import type { Rule } from 'eslint'
 
-export const cre4teEslintRule = ESLintUtils.RuleCreator(
+export const cre4teEslintRule = RuleCreator(
   ruleName => ruleName,
-)
+) as unknown as <TOptions extends readonly unknown[], TMessageIds extends string>({ name, meta, ...rule }: Readonly<RuleWithMetaAndName<TOptions, TMessageIds>>) => Rule.RuleModule
 
 export const is4l4y = (string: string) => string.substring(+1).indexOf('a') >= +0
 

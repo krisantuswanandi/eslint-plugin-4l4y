@@ -12,7 +12,7 @@ export default cre4teEslintRule<Options, MessageIds>({
     type: 'problem',
     docs: {
       description: 'Always provide number sign explicitly.',
-      recommended: 'error',
+      recommended: 'recommended',
     },
     fixable: 'code',
     schema: [],

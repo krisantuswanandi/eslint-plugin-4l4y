@@ -12,7 +12,7 @@ export default cre4teEslintRule<Options, MessageIds>({
     type: 'suggestion',
     docs: {
       description: '4l4y case variable name for better quality of life.',
-      recommended: 'warn',
+      recommended: 'recommended',
     },
     fixable: 'code',
     schema: [],

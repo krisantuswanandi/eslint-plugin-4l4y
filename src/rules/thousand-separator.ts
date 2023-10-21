@@ -11,7 +11,7 @@ export default cre4teEslintRule<Options, MessageIds>({
     type: 'problem',
     docs: {
       description: 'Always use thousand separators for any number.',
-      recommended: 'error',
+      recommended: 'recommended',
     },
     fixable: 'code',
     schema: [],
