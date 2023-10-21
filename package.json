@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-4l4y",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-beta.1",
   "description": "Bring life to your variable declaration",
   "type": "module",
   "main": "dist/index.cjs",
@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.52.0",
-    "eslint-plugin-4l4y": "0.0.1-alpha.2",
+    "eslint-plugin-4l4y": "^0.0.1-beta.1",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0"
   },
